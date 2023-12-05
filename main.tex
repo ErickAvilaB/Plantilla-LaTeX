@@ -1,0 +1,133 @@
+% ---------- Plantilla para tareas de la Facultad de Ciencias, UNAM ----------
+\documentclass{article}
+
+% ---------- Datos del documento ----------
+\newcommand{\autorName}{Avila Barba Erick Yahir} % Nombre
+\newcommand{\autorAPA}{Avila, E.} % Nombre abreviado
+\newcommand{\noCuenta}{321159063} % Numero de cuenta
+\newcommand{\fecha}{Agosto 28, 2023.} % Fecha de entrega
+\newcommand{\tareaName}{Práctica 0 - Sintaxis} % Tarea
+\newcommand{\profeName}{Erick Bernal Márquez} % Profesor
+\newcommand{\materiaName}{Introducción a Ciencias de la Computación} % Materia
+
+% ---------- Paquetes necesarios ----------
+\usepackage[utf8]{inputenc} % Soporte para caracteres
+\usepackage[spanish,mexico]{babel} % Soporte en español
+\usepackage[letterpaper, margin=2cm]{geometry} % Soporte para tamaño de hoja y margenes
+\usepackage{graphicx} % Soporte para imágenes
+\usepackage{amsmath} % Soporte para matemáticas
+\usepackage{amssymb} % Soporte para símbolos
+\usepackage{setspace} % Soporte para entrelineado
+\usepackage{caption} % Soporte pie de imagen
+\usepackage{fancyhdr} % Soporte para encabezados y pie de pagina
+
+% ---------- Configuraciones ----------
+\graphicspath{ {./img/} } % Carpeta de imágenes
+\onehalfspacing % Entrelineado 1.5
+
+% Estilo de la pagina
+\fancypagestyle{miEstilo}{
+    \fancyhf{} % Resetea estilos
+    \fancyhead[L]{\autorAPA} % Nombre de la tarea
+    \fancyhead[R]{\tareaName} % Nombre de la tarea
+    \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
+    \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
+    \fancyfoot[C]{\thepage} % Número de página
+}
+
+\fancypagestyle{portada}{
+    \fancyhf{} % Resetea estilos
+    \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
+    \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
+    \fancyfoot[C]{\thepage} % Número de página
+}
+
+\pagestyle{miEstilo} % Establece el estilo de la pagina
+
+% ---------- Inicio del documento ----------
+\begin{document}
+
+% Portada
+\thispagestyle{portada}
+\begin{figure}[ht]
+   \minipage{0.76\textwidth}
+        \includegraphics[width=4cm]{Logo_UNAM.png}
+        \label{EscudoUNAM}
+   \endminipage
+   \minipage{0.32\textwidth}
+        \includegraphics[height = 4.9cm ,width=4cm]{Logo_FC.png}
+        \label{EscudoFC}
+    \endminipage
+\end{figure}
+
+\begin{center}
+    % Nombre de la universidad
+    \vspace{0.8cm}
+    \LARGE
+    UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 
+    
+    % Nombre de la facultad
+    \vspace{0.8cm}
+    \LARGE
+    FACULTAD DE CIENCIAS
+    
+    % Tarea
+    \vspace{1.7cm}	
+    \Large
+    \textbf{\tareaName}
+    
+    % Nombre del autor
+    \vspace{1.3cm}
+    \normalsize	
+    PRESENTA \\
+    \vspace{.3cm}
+    \large
+    \textbf{\autorName}\\
+    \vspace{.2cm}
+    \textbf{\noCuenta}
+    
+    % Nombre del profesor
+    \vspace{1.3cm}
+    \normalsize	
+    PROFESOR \\
+    \vspace{.3cm}
+    \large
+    \textbf{\profeName}
+    
+    % Nombre de la materia
+    \vspace{1.3cm}
+    \normalsize	
+    ASIGNATURA \\
+    \vspace{.3cm}
+    \large
+    \textbf{\materiaName}
+    
+    % Fecha
+    \vspace{1.3cm}
+    \fecha
+\end{center}
+
+\newpage
+
+% Titulo
+\begin{center}
+    % Nombre de la tarea
+    \huge
+    \tareaName
+    
+    % Nombre del autor
+    \vspace{0.5cm}
+    \large
+    \autorName
+
+    % Fecha
+    \vspace{0.3cm}
+    \large
+    \fecha 
+\end{center}
+\vspace{0.5cm}
+
+% Contenido del documento
+\section*{Hola Mundo}
+
+\end{document}
