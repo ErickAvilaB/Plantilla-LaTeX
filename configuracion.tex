@@ -1,0 +1,35 @@
+% Configuración del documento
+
+% ---------- Paquetes necesarios ----------
+\usepackage[utf8]{inputenc} % Soporte para caracteres
+\usepackage[spanish,mexico]{babel} % Soporte en español
+\usepackage[letterpaper, margin=2cm]{geometry} % Soporte para tamaño de hoja y margenes
+\usepackage{graphicx} % Soporte para imágenes
+\usepackage{amsmath} % Soporte para matemáticas
+\usepackage{amssymb} % Soporte para símbolos
+\usepackage{setspace} % Soporte para entrelineado
+\usepackage{caption} % Soporte pie de imagen
+\usepackage{fancyhdr} % Soporte para encabezados y pie de pagina
+
+% ---------- Configuraciones ----------
+\graphicspath{ {./img/} } % Carpeta de imágenes
+\onehalfspacing % Entrelineado 1.5
+
+% Estilo de la pagina
+\fancypagestyle{miEstilo}{
+    \fancyhf{} % Resetea estilos
+    \fancyhead[L]{\autorAPA} % Nombre de la tarea
+    \fancyhead[R]{\tareaName} % Nombre de la tarea
+    \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
+    \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
+    \fancyfoot[C]{\thepage} % Número de página
+}
+
+\fancypagestyle{portada}{
+    \fancyhf{} % Resetea estilos
+    \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
+    \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
+    \fancyfoot[C]{\thepage} % Número de página
+}
+
+\pagestyle{miEstilo} % Establece el estilo de la pagina
