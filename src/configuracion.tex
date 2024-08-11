@@ -11,6 +11,7 @@
 \usepackage{setspace} % Soporte para entrelineado
 \usepackage{caption} % Soporte pie de imagen
 \usepackage{fancyhdr} % Soporte para encabezados y pie de pagina
+\usepackage{lipsum} % Texto de relleno
 
 % ---------- Configuraciones ----------
 \graphicspath{ {img/} } % Carpeta de imágenes
@@ -19,8 +20,8 @@
 % Estilo de la pagina
 \fancypagestyle{miEstilo}{
     \fancyhf{} % Resetea estilos
-    \fancyhead[L]{\autorAPA} % Nombre de la tarea
-    \fancyhead[R]{\tareaName} % Nombre de la tarea
+    \fancyhead[L]{\autorAPA} % Nombre del autor
+    \fancyhead[R]{\tarea} % Nombre de la tarea
     \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
     \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
     \fancyfoot[C]{\thepage} % Número de página
@@ -33,4 +34,5 @@
     \fancyfoot[C]{\thepage} % Número de página
 }
 
+\thispagestyle{portada} % Estilo primera pagina
 \pagestyle{miEstilo} % Establece el estilo de la pagina
