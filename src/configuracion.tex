@@ -11,6 +11,9 @@
 \usepackage{setspace} % Soporte para entrelineado
 \usepackage{fancyhdr} % Soporte para encabezados y pie de pagina
 \usepackage{lipsum} % Texto de relleno
+\usepackage{xcolor} % Para definir colores
+\usepackage[normalem]{ulem} % Para subrayado sin cambiar énfasis
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue, filecolor=blue]{hyperref}
 
 % ---------- Configuraciones ----------
 \graphicspath{ {img/} } % Carpeta de imágenes
@@ -35,3 +38,29 @@
 
 \thispagestyle{portada} % Estilo primera pagina
 \pagestyle{miEstilo} % Establece el estilo de la pagina
+
+% Hace que las demostraciones sean en cursiva, negritas y subrayadas
+\def\proof{\textit{\textbf{\underline{Demostración}}}\\}
+\def\endproof{\hspace*{\fill} $_\blacksquare$}
+
+% ---------- Comandos ----------
+
+% Comando personalizado para subrayar enlaces
+\newcommand{\ulhref}[2]{\href{#1}{\uline{#2}}}
+
+% Comando personalizado para generar el cuerpo basico del documento
+\newcommand{\cuerpo}{
+    % ---------- Cuerpo del documento ----------
+
+    \section*{Introducción}
+
+    \lipsum[1]
+    \vspace{0.5cm}
+
+    \begin{proof}
+        \lipsum[2]
+    \end{proof}
+    \vspace{0.5cm}
+
+    Checa este video: \ulhref{https://www.youtube.com/watch?v=r4l9bFqgMaQ}{Frank
+        Ocean \- Nights} }
