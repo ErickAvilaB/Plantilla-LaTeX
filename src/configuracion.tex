@@ -13,7 +13,8 @@
 \usepackage{lipsum} % Texto de relleno
 \usepackage{xcolor} % Para definir colores
 \usepackage[normalem]{ulem} % Para subrayado sin cambiar énfasis
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue, filecolor=blue]{hyperref}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue, filecolor=blue]{hyperref}
+\usepackage{lastpage}
 
 % ---------- Configuraciones ----------
 \graphicspath{ {img/} } % Carpeta de imágenes
@@ -26,21 +27,21 @@
     \fancyhead[R]{\tarea} % Nombre de la tarea
     \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
     \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
-    \fancyfoot[C]{\thepage} % Número de página
+    \fancyfoot[C]{\textit{Página \thepage \hspace{1pt} de \pageref{LastPage}}} % Número de página
 }
 
 \fancypagestyle{portada}{
     \fancyhf{} % Resetea estilos
     \renewcommand{\headrulewidth}{0.01cm} % Linea arriba
     \renewcommand{\footrulewidth}{0.01cm} % Linea abajo
-    \fancyfoot[C]{\thepage} % Número de página
+    \fancyfoot[C]{\textit{Página \thepage \hspace{1pt} de \pageref{LastPage}}} % Número de página
 }
 
 \thispagestyle{portada} % Estilo primera pagina
 \pagestyle{miEstilo} % Establece el estilo de la pagina
 
 % Hace que las demostraciones sean en cursiva, negritas y subrayadas
-\def\proof{\textit{\textbf{\underline{Demostración}}}\\}
+\def\proof{\textit{\textbf{\underline{Demostración}}}\\[0.2cm]\indent}
 \def\endproof{\hspace*{\fill} $_\blacksquare$}
 
 % ---------- Comandos ----------
